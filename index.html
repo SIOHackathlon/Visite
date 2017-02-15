@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stages BTS SIO</title>
+  <link rel="stylesheet" type="text/css" href="styles/inline.css">
+
+  <!-- TODO add manifest here -->
+  
+</head>
+<body>
+
+  <header class="header">
+    <h1 class="header__title">Liste des stages</h1>
+    <button id="butRefresh" class="headerButton" aria-label="Refresh"></button>
+    <button id="butAdd" class="headerButton" aria-label="Add"></button>
+  </header>
+
+  <main class="main">
+  
+  <!--
+	<ul >
+	  <li>
+	    Nom : <input data-bind="value: nom"/> Entreprise : <input data-bind="value: entreprise"/>
+	  </li>
+	</ul>
+	Bonjour <span data-bind="text: libelle"></span>
+  -->
+	
+	<ul data-bind="foreach: stages" >
+	  <li>
+	    <span data-bind="text: st_nom"></span> <span data-bind="text: st_entreprise"></span>
+	  </li>
+	</ul>
+
+	<!-- Uncomment the line below when ready to test with fake data -->
+  
+ 
+  <button data-bind='click: refresh(null)'>RefreshBind</button>
+  <button type="button" name = "refresh" onclick = "sm.refresh(null)">Refresh</button>
+
+  
+   <script src="scripts/knockout-3.4.1.js"></script>
+   <script src="scripts/tecnic.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>
