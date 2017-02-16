@@ -27,7 +27,7 @@ StageModel = function (){
 
 var st= {};
 st.chargeur = {
-	uri : "http://127.0.0.1/Hackathon/Thierry",
+	uri : "http://127.0.0.1:8887/",
 	
 	stages : function (callback){
 		fcallback = callback;
